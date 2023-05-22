@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function changeImage(){
+        function changeImage() {
             var select1 = document.getElementById("fruit");
             var img1 = document.getElementById("imgFruit");
 
             var path = select1.options[select1.selectedIndex].value;
             //alert(path);
-            img1.src =path;
-            img1.width =400;
-            img1.height =350;
+            img1.src = path;
+            img1.width = 400;
+            img1.height = 350;
         }
     </script>
 </head>
+
 <body>
     <form action="">
         <select id="fruit">
@@ -25,9 +27,10 @@
             <option value="imgs/orange.jpg">ORANGE</option>
             <option value="imgs/banana.jpg">BANANA</option>
         </select>
-        <button id = "btn" onclick="changeImage()" type="button">과일선택</button>
+        <button id="btn" onclick="changeImage()" type="button">과일선택</button>
         <br>
         <img src="" id="imgFruit">
     </form>
 </body>
+
 </html>

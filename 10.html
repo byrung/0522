@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeImage() {
+            var radioArr = document.getElementsByName("a");
+            var img1 = document.getElementById("img1");
+            for(var i =0; i<radioArr.length; i++){
+                if(radioArr[i].checked){
+                    img1.src = radioArr[i].value;
+                    img1.width = 300;
+                    img1.height = 500;
+                }
+            }
+        }
+        function init(){
+            img1 = document.getElementById("img1");
+            img1.src = "img/orange.jpg";
+            img1.width = 300;
+            img1.height = 500;
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <form action="">
+        <input type="radio" value="imgs/apple.jpg" name = "a">APPLE
+        <input type="radio" value="imgs/kiwi.jpg" name = "a">KIWI
+        <input type="radio" value="imgs/orange.jpg" name = "a">ORANGE
+        <input type="radio" value="imgs/banana.jpg" name = "a">BANANA
+        <button id="btn" onclick="changeImage()" type="button">과일선택</button>
+        <br>
+        <img src="" id="img1">
+    </form>
+</body>
+
+</html>
